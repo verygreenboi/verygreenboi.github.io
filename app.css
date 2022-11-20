@@ -9,13 +9,6 @@ body {
   margin: 0 auto;
   padding: 0 2rem;
 }
-
-@media screen and (min-width: 720px) {
-  body {
-    padding: 0 4rem;
-  }
-}
-
 nav, nav ul {
   display: flex;
   align-items: center;
@@ -27,4 +20,15 @@ nav {
 
 nav ul {
   gap: 1rem;
+}
+
+@media screen and (min-width: 720px) {
+  body {
+    padding: 0 4rem;
+  }
+
+  nav {
+    justify-content: flex-start;
+    gap: 8rem;
+  }
 }
