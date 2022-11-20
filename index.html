@@ -10,23 +10,13 @@
   <link href="./app.css" rel="stylesheet">
 </head>
 <body>
-  <div class="container">
-    <img class="logo" src="https://uploads-ssl.webflow.com/5ec172593f3725689f22aaf2/5ec46cab55b53e5bb74e9a83_renmoney_logo.svg" alt="logo">
-    <rm-pay-btn id="pay-btn"></rm-pay-btn>
-  </div>
-  <script src="./renmoney-pay-btn.js"></script>
-  <script>
-    const doc = document.getElementById('pay-btn');
-    doc.addEventListener('payment-data', async (event) => {
-      console.log('BUTTON RESPONSE', event.detail);
-      try {
-        const res = await fetch('https://jsonplaceholder.typicode.com/todos/1');
-        const todos = await res.json();
-        console.log('TODOS', todos);
-      } catch (e) {
-        console.error(e);
-      }
-    });
-  </script>
+  <nav>
+    <h1>Home</h1>
+    <ul>
+      <li><a rel="me" href="https://mastodon.social/@mrsmith9ja">Mastodon</a></li>
+      <li><a href="https://twitter.com/MrSmith9ja">Twitter</a></li>
+      <li><a href="https://github.com/verygreenboi">Github</a></li>
+    </ul>  
+  </nav>
 </body>
 </html>
