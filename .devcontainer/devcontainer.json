@@ -1,5 +1,15 @@
 {
-  "image": "mcr.microsoft.com/devcontainers/universal:2",
-  "features": {
-  }
+	"image": "mcr.microsoft.com/devcontainers/universal:2",
+	"features": {},
+	"postCreateCommand": ".devcontainer/setup.sh",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"k--kato.intellij-idea-keybindings",
+				"bmalehorn.shell-syntax",
+				"mrmlnc.vscode-scss",
+				"sibiraj-s.vscode-scss-formatter"
+			]
+		}
+	}
 }
