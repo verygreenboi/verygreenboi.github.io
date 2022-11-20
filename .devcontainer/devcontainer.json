@@ -1,15 +1,29 @@
 {
-	"image": "mcr.microsoft.com/devcontainers/universal:2",
-	"features": {},
-	"postCreateCommand": ".devcontainer/setup.sh",
-	"customizations": {
-		"vscode": {
-			"extensions": [
-				"k--kato.intellij-idea-keybindings",
-				"bmalehorn.shell-syntax",
-				"mrmlnc.vscode-scss",
-				"sibiraj-s.vscode-scss-formatter"
-			]
-		}
-	}
+	"name": "Jekyll",
+	"image": "mcr.microsoft.com/devcontainers/jekyll:0-bullseye",
+	"features": {
+		"ghcr.io/devcontainers/features/node:1": {
+			"version": "lts"
+		},
+		"ghcr.io/devcontainers/features/git:1": {},
+		"ghcr.io/devcontainers/features/github-cli:1": {},
+		"ghcr.io/devcontainers/features/sshd:1": {}
+	},
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	"forwardPorts": [
+		// Jekyll server
+		4000,
+		// Live reload server
+		35729
+	],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	"postCreateCommand": "sh .devcontainer/post-create.sh"
+
+	// Configure tool-specific properties.
+	// "customizations": {},
+
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
 }
